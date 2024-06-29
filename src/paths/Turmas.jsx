@@ -45,7 +45,7 @@ export default (() =>{
             <div className='flex flex-col items-start w-full sm:w-1/2'>
             <div className='pl-7 pr-7 pb-3 flex flex-row w-full justify-between items-center'>
             <h2 className='text-3xl font-medium text-white'>Minhas Turmas</h2>
-            <h2>outro botao1</h2>
+            <h2>outro botao2</h2>
             </div>
             <div className='p-7 bg-zinc-800 w-full min-w-96 min-h-screen flex shadow-xl shadow-black rounded-3xl'>
             oi
