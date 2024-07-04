@@ -10,7 +10,7 @@ export default () => {
   const { isAuthenticated } = useAuth();
   const { login } = useAuth();
   const navigate = useNavigate();
-
+  const url = import.meta.env.VITE_BACKEND_URL
   useEffect(() => {
     if (isAuthenticated) {
       navigate("/turmas");
@@ -30,7 +30,7 @@ export default () => {
     try {
       console.log("Submit");
       const response = await axios.post(
-        "http://localhost:8080/autenticacao/login",
+        `${url}/autenticacao/login`,
         {
           email,
           senha,
@@ -114,12 +114,12 @@ export default () => {
             </div>
           </form>
           {erro == erroLogin && (
-            <p className="text-center font-bold text-red-800 max-w-10">
+            <p className="text-center font-bold text-white max-w-72 bg-red-500 p-1 rounded-md">
               Login e/ou senha inválidos.
             </p>
           )}
           {erro != erroLogin && erro != "" && (
-            <p className="text-center font-bold text-red-800 max-w-72">
+            <p className="text-center font-bold text-white max-w-72 bg-red-500 p-1 rounded-md">
               Erro ao efetuar login, tente novamente mais tarde.
             </p>
           )}

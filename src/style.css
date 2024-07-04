@@ -1,0 +1,26 @@
+/* styles.css */
+
+/* Estilos gerais para a scrollbar */
+::-webkit-scrollbar {
+    width: 5px; /* Largura da scrollbar vertical */
+    height: 50px; /* Altura da scrollbar horizontal */
+  }
+  
+  /* Estilos para o track da scrollbar (fundo) */
+  ::-webkit-scrollbar-track {
+    background: none; /* Cor do fundo da scrollbar */
+    border-radius: 10px; /* Bordas arredondadas */
+  }
+  
+  /* Estilos para o thumb da scrollbar (parte que se move) */
+  ::-webkit-scrollbar-thumb {
+    background-color: #ffffff; /* Cor do thumb */
+    border-radius: 10px; /* Bordas arredondadas */
+
+  }
+  
+  /* Estilos para o thumb da scrollbar ao passar o mouse */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #2d3748; /* Cor do thumb ao passar o mouse */
+  }
+  

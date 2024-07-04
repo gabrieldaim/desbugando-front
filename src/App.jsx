@@ -4,10 +4,12 @@ import './index.css';
 import Header from './components/header_footer/Header'; 
 import Footer from './components/header_footer/Footer'; 
 import Home from './paths/Home'; 
-import Turmas from './paths/Turmas';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 import { AuthProvider } from './components/auth/AuthContext';
 import Login from './paths/Login';
+import Turmas from './paths/Turmas';
+import Turma from './paths/Turma';
+import MeuPerfil from './paths/MeuPerfil';
 
 function App() {
   return (
@@ -21,6 +23,12 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route element={<ProtectedRoute />}>
               <Route path="/turmas" element={<Turmas />} />
+            </Route>
+            <Route element={<ProtectedRoute />}>
+              <Route path="/turma/:idTurma" element={<Turma />} />
+            </Route>
+            <Route element={<ProtectedRoute />}>
+              <Route path="/MeuPerfil" element={<MeuPerfil />} />
             </Route>
           </Routes>
         </main>

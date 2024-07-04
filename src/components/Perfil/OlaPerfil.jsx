@@ -41,7 +41,7 @@ export default function UserProfile() {
         <img
           src="../../../public/dropdown.png"
           alt="dropdown"
-          className={`w-3 h-2 transition-transform duration-300 ${isDropdownOpen ? '-rotate-180' : ''}`}
+          className={` object-cover w-3 h-2 transition-transform duration-300 ${isDropdownOpen ? '-rotate-180' : ''}`}
         />
       </div>
 

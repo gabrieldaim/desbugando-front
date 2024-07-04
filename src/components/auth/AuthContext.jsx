@@ -33,7 +33,7 @@ export const AuthProvider = ({ children }) => {
     localStorage.removeItem('nome');
     localStorage.removeItem('tipo');
     localStorage.removeItem('url_foto')
-  };
+  }; 
 
 
 

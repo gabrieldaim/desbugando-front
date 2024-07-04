@@ -1,3 +1,5 @@
+/* Importar o arquivo CSS personalizado */
+@import './style.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
