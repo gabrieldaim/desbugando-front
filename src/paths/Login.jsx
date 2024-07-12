@@ -6,7 +6,7 @@ import { useAuth } from "../components/auth/AuthContext";
 import BotaoGenericoVerdeGrande from "../components/Botoes/Botao_g_g";
 import axios from "axios";
 
-export default () => {
+export default ({setNome, setUrlFoto}) => {
   const { isAuthenticated } = useAuth();
   const { login } = useAuth();
   const navigate = useNavigate();
@@ -38,8 +38,11 @@ export default () => {
       );
       const data = response.data;
       console.log("Resposta da API:", data);
-      login(data.token, data.email, data.nome, data.tipo,data.url_foto);
+      login(data.token, data.email, data.nome, data.tipo,data.url_foto,data.url_github,data.url_linkedin);
       navigate("/turmas");
+      setNome(data.nome);
+      setUrlFoto(data.url_foto);
+      setUrlFoto(data.url_foto);
     } catch (error) {
       console.log(error)
       if (error.response) {
@@ -99,7 +102,7 @@ export default () => {
                 <input
                   id="senha"
                   name="senha"
-                  type="senha"
+                  type="password"
                   value={senha}
                   onChange={(e) => setSenha(e.target.value)}
                   required

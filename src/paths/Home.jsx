@@ -13,7 +13,7 @@ export default () => {
           Aqui você irá começar a traçar sua trilha como dev. Junte-se ao grupo!
         </p>
         <div className="flex gap-5">
-          <Link to="google.com">
+          <Link to="/login">
           <BotaoGenericoSemBorda texto="Inscrever-se"/>
           </Link>
           <Link to="/login">

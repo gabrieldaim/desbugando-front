@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useAuth } from '../auth/AuthContext';
 
-export default function UserProfile() {
+export default function UserProfile({nome,urlFoto}) {
+  console.log(urlFoto == "null")
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const nome = localStorage.getItem("nome");
-  const foto = localStorage.getItem("url_foto");
+  
   const foto_default = "../../../public/bug.png";
   const dropdownRef = useRef(null);
   const {logout} = useAuth()
@@ -34,7 +34,7 @@ export default function UserProfile() {
       >
         <p className="text-lg font-bold text-white">Olá, {nome}</p>
         <img
-          src={foto === "null" ? foto_default : foto}
+          src={urlFoto == "null" ? "../../../public/bug.png" : urlFoto}
           alt="foto_perfil"
           className="w-10 rounded-full"
         />

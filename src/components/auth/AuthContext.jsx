@@ -15,7 +15,7 @@ export const AuthProvider = ({ children }) => {
     return storedAuthState && storedToken != "" ? JSON.parse(storedAuthState) : false;
   });
 
-  const login = (tokenJWT,email,nome,tipo,url_foto) => {
+  const login = (tokenJWT,email,nome,tipo,url_foto,url_github,url_linkedin) => {
     setIsAuthenticated(true);
     localStorage.setItem('isAuthenticated', true);
     localStorage.setItem('tokenJWT', tokenJWT);
@@ -23,6 +23,8 @@ export const AuthProvider = ({ children }) => {
     localStorage.setItem('nome', nome);
     localStorage.setItem('tipo', tipo);
     localStorage.setItem('url_foto', url_foto);
+    localStorage.setItem('url_github', url_github);
+    localStorage.setItem('url_linkedin', url_linkedin);
   };
 
   const logout = () => {

@@ -90,7 +90,10 @@ export default function CardTurma({ id, nome, criacao, onClick, funcao }) {
                 <li>
                   <a
                     href={`/turma/${id}`}
-                    className="block px-4 py-2 text-gray-800 font-semibold flex flex-row justify-start items-center gap-3 hover:bg-gray-200"
+                    className="px-4 py-2 text-gray-800 font-semibold flex flex-row justify-start items-center gap-3 hover:bg-gray-200"
+                    onClick={(event) => {
+                      event.stopPropagation();
+                    }}
                   >
                     <img src="../../../public/editar.png" alt="" className='h-5'/>
                     Editar turma
@@ -99,7 +102,10 @@ export default function CardTurma({ id, nome, criacao, onClick, funcao }) {
                 <li>
                   <a
                     className="block px-4 py-2 text-gray-800 font-semibold flex flex-row justify-start gap-3 hover:bg-red-100"
-                    onClick={isLoading ? console.log("carregando função de deletar") : ()=> DeleteTurma(id)}
+                    onClick={(event) => {
+                      event.stopPropagation();
+                      DeleteTurma(id);
+                    }}
                   >
                     {isLoading ? <img src="../../public/loadingPreto.png" alt="loading" className="h-6 animate-spin"></img> : <img src="../../../public/excluir.png" alt="" className='w-5'/>}
                     {isLoading ? "Excluindo..." : erro == "" ? "Excluir turma" : "Erro na exclusão"}

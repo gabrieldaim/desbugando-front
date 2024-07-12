@@ -5,13 +5,14 @@ import { useAuth } from "../components/auth/AuthContext";
 import CardTurma from "../components/Cards/CardTurma";
 import BotaoCriarTurma from "../components/Botoes/Botao_criar_turma";
 import { isAdmin } from "../auxiliar/IsAdmin";
+import { useNavigate } from "react-router";
 
 export default () => {
   const [isLoading, setIsLoading] = useState(false);
   const [turmas, setTurmas] = useState([]);
   const { logout } = useAuth();
   const url = import.meta.env.VITE_BACKEND_URL
-  console.log(import.meta.env.DEV)
+  const navigate = useNavigate();
   useEffect(() => {
     const tokenJWT = localStorage.getItem("tokenJWT");
 
@@ -48,8 +49,8 @@ export default () => {
     }
   }, []);
 
-  const handleClick = (id) => {
-    console.log(id);
+  const handleClick = (id,nome) => {
+    navigate(`/postagensTurma/${id}`, { state: { nome: nome } });
   };
 
   const excluirTurmas = (id) => {
@@ -71,7 +72,7 @@ export default () => {
                 id={item.id}
                 nome={item.nome}
                 criacao={item.dataCriacao}
-                onClick={() => handleClick(item.id)}
+                onClick={() => handleClick(item.id,item.nome)}
                 funcao={() => excluirTurmas(item.id)}  
                 
               />

@@ -18,6 +18,7 @@ const GerenciarMatriculas = ({ turmaProps }) => {
 
   useEffect(() => {
     if (turmaProps) {
+      console.log(turmaProps)
       setTurma(turmaProps);
       setMatriculas(turmaProps.matriculas || []);
     }
@@ -39,7 +40,7 @@ const GerenciarMatriculas = ({ turmaProps }) => {
           return {
             id: usuario.id,
             nome: usuario.nome,
-            url_foto: usuario.url_foto || "../../../public/bug.png",
+            url_foto: usuario.urlFoto || "../../../public/bug.png",
             matriculado: estaMatriculado,
           };
         });

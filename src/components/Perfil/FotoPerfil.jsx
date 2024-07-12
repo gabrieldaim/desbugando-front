@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useRef, useState } from "react";
 import BotaoGenericoVerdeSalvamento from "../Botoes/Botao_salvamento_verde";
 
-const FotoPerfil = () => {
+const FotoPerfil = ({setUrlFoto}) => {
   const [imgUrl, setImgUrl] = useState(localStorage.getItem("url_foto"));
   const [isLoading, setIsLoading] = useState(false);
   const [erro, setErro] = useState(false);
@@ -50,6 +50,7 @@ const FotoPerfil = () => {
       const fileUrl = response.data;
       setImgUrl(fileUrl);
       localStorage.setItem("url_foto", fileUrl);
+      setUrlFoto(fileUrl)
       setSalvo(true);
     } catch (error) {
       console.error("Erro ao subir a foto:", error);
