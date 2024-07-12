@@ -22,3 +22,7 @@ npm install
 
 ```env
 VITE_BACKEND_URL=http://localhost:8080
+```
+
+As informações de como iniciar o backend estão disponiveis no repositório do mesmo:
+https://github.com/gabrieldaim/devjuniors-backend/tree/main
