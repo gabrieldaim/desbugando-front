@@ -26,3 +26,10 @@ VITE_BACKEND_URL=http://localhost:8080
 
 As informações de como iniciar o backend estão disponiveis no repositório do mesmo:
 https://github.com/gabrieldaim/devjuniors-backend/tree/main
+
+## Iniciando o projeto
+
+Como estamos utilizando o vite, precisamos rodar o seguinte comando para inicializar o projeto:
+```cmd
+npm run dev
+```
