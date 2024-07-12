@@ -1,8 +1,35 @@
-# React + Vite
+# Frontend em React para Plataforma de Estudos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é o frontend em React para a plataforma de estudos, desenvolvido com JavaScript vanilla e estilizado utilizando Tailwind CSS. O frontend se comunica com o backend em Java/Spring Boot para todas as operações.
 
-Currently, two official plugins are available:
+## Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Vite
+- React
+- JavaScript
+- Tailwind CSS
+
+## Configuração do Projeto
+
+Antes de iniciar o projeto, certifique-se de ter o Node.js instalado na sua máquina. Você pode configurar o link para o backend no arquivo `.env` localizado na raiz do projeto.
+
+Lembre-se de instalar as dependencias
+```cmd
+npm install
+```
+
+### Exemplo de .env
+
+```env
+VITE_BACKEND_URL=http://localhost:8080
+```
+
+As informações de como iniciar o backend estão disponiveis no repositório do mesmo:
+https://github.com/gabrieldaim/devjuniors-backend/tree/main
+
+## Iniciando o projeto
+
+Como estamos utilizando o vite, precisamos rodar o seguinte comando para inicializar o projeto:
+```cmd
+npm run dev
+```
