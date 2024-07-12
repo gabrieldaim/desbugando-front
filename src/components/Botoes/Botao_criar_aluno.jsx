@@ -30,7 +30,7 @@ const BotaoCriarAluno = ({ funcao }) => {
 
   const CreateAluno = async (nomeAluno,emailAluno,tipo) => {
     setIsLoading(true);
-
+    console.log(nomeAluno,emailAluno,tipo);
     try {
       const response = await axios.post(
         `${url}/autenticacao/criar`,
@@ -48,6 +48,7 @@ const BotaoCriarAluno = ({ funcao }) => {
 
       const novaTurma = {
         id: response.data.uuid,
+        email: emailAluno,
         nome: response.data.nome,
       };
 

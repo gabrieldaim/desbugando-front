@@ -16,6 +16,7 @@ const BotaoResetarSenhaAluno = ({ aluno }) => {
   const tokenJWT = localStorage.getItem("tokenJWT");
   const url = import.meta.env.VITE_BACKEND_URL;
 
+  console.log(aluno)
 
   const ExcluirAluno = async () => {
     setIsLoading(true);

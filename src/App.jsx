@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
-import Header from './components/header_footer/Header'; 
-import Footer from './components/header_footer/Footer'; 
+
 import Home from './paths/Home'; 
 import ProtectedRoute from './components/auth/ProtectedRoute';
 import { AuthProvider } from './components/auth/AuthContext';
@@ -12,6 +11,7 @@ import Turma from './paths/Turma';
 import MeuPerfil from './paths/MeuPerfil';
 import { Toaster } from 'react-hot-toast';
 import PostagensTurma from './paths/PostagensTurma';
+import Header from './components/header/Header';
 
 function App() {
   const [nome, setNome] = useState(localStorage.getItem("nome"));
@@ -41,7 +41,6 @@ function App() {
             </Route>
           </Routes>
         </main>
-        <Footer />
       </Router>
     </AuthProvider>
     </body>
